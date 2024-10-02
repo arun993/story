@@ -59,7 +59,7 @@ main() {
     npm run non-commercial
 
     # Instructions to perform actions on testnet
-    printf "\nDo these 2 tasks (NEED SOME $IP ON TESTNET):\n\n"
+    printf "\nDo these 2 tasks (NEED SOME IP ON TESTNET):\n\n"
     printf "Go to: %s\n" "$CONTRACT1_URL"
     printf "Connect your wallet\n"
     printf "address = your metamask address\n"
