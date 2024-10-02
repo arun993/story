@@ -38,9 +38,13 @@ main() {
     fi
     cd typescript-tutorial || { printf "Directory not found\n" >&2; exit 1; }
 
-    # Take user input for .env file
+   # Take user input for .env file
     read -r -p "Enter your Wallet Private Key: " wallet_private_key
+    printf "\n"
+
     read -r -p "Go to $PINATA_URL (and extract JWT from API Key). Enter Pinata JWT: " pinata_jwt
+    printf "\n"
+
 
     # Create .env file
     {
