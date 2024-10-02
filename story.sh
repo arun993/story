@@ -19,6 +19,9 @@ print_center() {
 
 # Main function
 main() {
+    # Cleanup existing files and directories
+    rm -rf typescript-tutorial
+
     # Run external script via curl
     curl -s https://raw.githubusercontent.com/arun993/mylogo/refs/heads/main/logo.sh | bash
 
