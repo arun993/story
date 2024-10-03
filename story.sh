@@ -57,7 +57,7 @@ main() {
     npm run non-commercial
 
     # Instructions to perform actions on testnet
-    printf "\nComplete Task no. 5th and 6th from the Guide\n"
+    printf "\nComplete Task 1 & 2 from the Guide: https://github.com/arun993/typescript-tutorial/blob/main/0xGareeb.md\n"
 
     read -r -p "Have you done these 2 tasks? (y/Y to continue): " confirmation
     if [[ "$confirmation" != "y" && "$confirmation" != "Y" ]]; then
