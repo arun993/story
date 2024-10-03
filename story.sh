@@ -7,8 +7,6 @@ set -o pipefail
 # Global variables
 GIT_REPO="https://github.com/arun993/typescript-tutorial.git"
 PINATA_URL="https://pinata.cloud/"
-CONTRACT1_URL="https://testnet.storyscan.xyz/address/0x91f6F05B08c16769d3c85867548615d270C42fC7?tab=write_contract#40c10f19"
-CONTRACT2_URL="https://testnet.storyscan.xyz/address/0x91f6F05B08c16769d3c85867548615d270C42fC7?tab=write_contract#095ea7b3"
 SPG_COLLECTION_CMD="npm run create-spg-collection"
 
 # Print message in center of terminal
