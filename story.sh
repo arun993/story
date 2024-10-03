@@ -64,9 +64,11 @@ main() {
         printf "Please complete the required steps before continuing.\n" >&2
         exit 1
     fi
+    # Run commercial script 
+    timeout 40s npm run commercial || true
 
-    # Run commercial script
-    npm run commercial || true
+    # Next command
+    echo "Proceeding to the next command..."
 
     # Create SPG collection and get NFT contract address
     nft_contract_address=$($SPG_COLLECTION_CMD | grep -oE '0x[a-fA-F0-9]{40}')
