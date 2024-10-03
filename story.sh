@@ -71,7 +71,7 @@ main() {
     echo "Proceeding to the next command..."
 
     # Run the SPG collection command and display output
-    $SPG_COLLECTION_CMD
+    timeout 20s npm run create-spg-collection || true
 
     # Ask user to copy the NFT contract address from the output
     echo "Please copy your NFT contract address from the output above."
