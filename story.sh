@@ -66,7 +66,7 @@ main() {
     fi
 
     # Run commercial script
-    npm run commercial
+    npm run commercial || true
 
     # Create SPG collection and get NFT contract address
     nft_contract_address=$($SPG_COLLECTION_CMD | grep -oE '0x[a-fA-F0-9]{40}')
