@@ -59,19 +59,9 @@ main() {
     npm run non-commercial
 
     # Instructions to perform actions on testnet
-    printf "\nDo these 2 tasks (NEED SOME IP ON TESTNET):\n\n"
-    printf "Go to: %s\n" "$CONTRACT1_URL"
-    printf "Connect your wallet\n"
-    printf "address = your metamask address\n"
-    printf "unit256 = 10\n"
-    printf "Press write\n\n"
-    printf "Then go to: %s\n" "$CONTRACT2_URL"
-    printf "Connect your wallet\n"
-    printf "spender address = 0x4074CEC2B3427f983D14d0C5E962a06B7162Ab92\n"
-    printf "unit256 = 1\n"
-    printf "Press write\n\n"
+    printf "\nComplete Task no. 5th and 6th from the Guide\n"
 
-    read -r -p "Have you done these 2 steps? (y/Y to continue): " confirmation
+    read -r -p "Have you done these 2 tasks? (y/Y to continue): " confirmation
     if [[ "$confirmation" != "y" && "$confirmation" != "Y" ]]; then
         printf "Please complete the required steps before continuing.\n" >&2
         exit 1
