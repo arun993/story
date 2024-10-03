@@ -70,18 +70,23 @@ main() {
     # Next command
     echo "Proceeding to the next command..."
 
-    # Create SPG collection and get NFT contract address
-    nft_contract_address=$($SPG_COLLECTION_CMD | grep -oE '0x[a-fA-F0-9]{40}')
-    if [[ -z "$nft_contract_address" ]]; then
-        printf "Failed to create SPG collection or extract contract address.\n" >&2
-        exit 1
+    # Run the SPG collection command and display output
+    $SPG_COLLECTION_CMD
+
+    # Ask user to copy the NFT contract address from the output
+    echo "Please copy your NFT contract address from the output above."
+
+    # Prompt user for the NFT contract address
+    read -p "Enter your NFT_CONTRACT_ADDRESS: " nft_contract_address
+
+    # Check if the user input is not empty and in the correct format
+    if [[ -z "$nft_contract_address" || ! "$nft_contract_address" =~ ^0x[a-fA-F0-9]{40}$ ]]; then
+    echo "Invalid NFT contract address. Please enter a valid address."
+    exit 1
     fi
 
-    printf "NFT CONTRACT ADDRESS: %s\n" "$nft_contract_address"
-    printf "Please save this address.\n"
-
-    # Append NFT contract address to .env file
-    printf "NFT_CONTRACT_ADDRESS=%s\n" "$nft_contract_address" >> .env
+    # Append the NFT contract address to the .env file
+    echo "NFT_CONTRACT_ADDRESS=$nft_contract_address" >> .env
 
     # Run metadata script and display output
     npm run metadata
